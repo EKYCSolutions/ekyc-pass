@@ -1,0 +1,9 @@
+*.tar
+build/ 
+.DS_Store
+__pycache__/
+YOLOX_outputs/
+forked_repo/*
+bytetrack/pretrained/*
+weights/*
+video_demo/*

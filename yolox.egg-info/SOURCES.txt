@@ -1,0 +1,597 @@
+.gitignore
+README.md
+log.txt
+main.py
+requirements.txt
+setup.py
+test.ipynb
+/Users/menghang/Desktop/ml-dev/football-server/yolox/layers/csrc/vision.cpp
+/Users/menghang/Desktop/ml-dev/football-server/yolox/layers/csrc/cocoeval/cocoeval.cpp
+bytetrack/exps/default/nano.py
+bytetrack/exps/default/yolov3.py
+bytetrack/exps/default/yolox_l.py
+bytetrack/exps/default/yolox_m.py
+bytetrack/exps/default/yolox_s.py
+bytetrack/exps/default/yolox_tiny.py
+bytetrack/exps/default/yolox_x.py
+bytetrack/exps/example/mot/yolox_l_mix_det.py
+bytetrack/exps/example/mot/yolox_m_mix_det.py
+bytetrack/exps/example/mot/yolox_nano_mix_det.py
+bytetrack/exps/example/mot/yolox_s_mix_det.py
+bytetrack/exps/example/mot/yolox_tiny_mix_det.py
+bytetrack/exps/example/mot/yolox_x_ablation.py
+bytetrack/exps/example/mot/yolox_x_ch.py
+bytetrack/exps/example/mot/yolox_x_mix_det.py
+bytetrack/exps/example/mot/yolox_x_mix_mot20_ch.py
+bytetrack/exps/example/mot/yolox_x_mot17_half.py
+bytetrack/yolox/_C.cpython-37m-darwin.so
+bytetrack/yolox/_C.cpython-38-darwin.so
+bytetrack/yolox/__init__.py
+bytetrack/yolox.egg-info/PKG-INFO
+bytetrack/yolox.egg-info/SOURCES.txt
+bytetrack/yolox.egg-info/dependency_links.txt
+bytetrack/yolox.egg-info/top_level.txt
+bytetrack/yolox/core/__init__.py
+bytetrack/yolox/core/launch.py
+bytetrack/yolox/core/trainer.py
+bytetrack/yolox/data/__init__.py
+bytetrack/yolox/data/data_augment.py
+bytetrack/yolox/data/data_prefetcher.py
+bytetrack/yolox/data/dataloading.py
+bytetrack/yolox/data/samplers.py
+bytetrack/yolox/data/datasets/__init__.py
+bytetrack/yolox/data/datasets/datasets_wrapper.py
+bytetrack/yolox/data/datasets/mosaicdetection.py
+bytetrack/yolox/data/datasets/mot.py
+bytetrack/yolox/deepsort_tracker/deepsort.py
+bytetrack/yolox/deepsort_tracker/detection.py
+bytetrack/yolox/deepsort_tracker/iou_matching.py
+bytetrack/yolox/deepsort_tracker/kalman_filter.py
+bytetrack/yolox/deepsort_tracker/linear_assignment.py
+bytetrack/yolox/deepsort_tracker/reid_model.py
+bytetrack/yolox/deepsort_tracker/track.py
+bytetrack/yolox/evaluators/__init__.py
+bytetrack/yolox/evaluators/coco_evaluator.py
+bytetrack/yolox/evaluators/evaluation.py
+bytetrack/yolox/evaluators/mot_evaluator.py
+bytetrack/yolox/exp/__init__.py
+bytetrack/yolox/exp/base_exp.py
+bytetrack/yolox/exp/build.py
+bytetrack/yolox/exp/yolox_base.py
+bytetrack/yolox/layers/__init__.py
+bytetrack/yolox/layers/fast_coco_eval_api.py
+bytetrack/yolox/layers/csrc/vision.cpp
+bytetrack/yolox/layers/csrc/cocoeval/cocoeval.cpp
+bytetrack/yolox/layers/csrc/cocoeval/cocoeval.h
+bytetrack/yolox/models/__init__.py
+bytetrack/yolox/models/darknet.py
+bytetrack/yolox/models/losses.py
+bytetrack/yolox/models/network_blocks.py
+bytetrack/yolox/models/yolo_fpn.py
+bytetrack/yolox/models/yolo_head.py
+bytetrack/yolox/models/yolo_pafpn.py
+bytetrack/yolox/models/yolox.py
+bytetrack/yolox/motdt_tracker/basetrack.py
+bytetrack/yolox/motdt_tracker/kalman_filter.py
+bytetrack/yolox/motdt_tracker/matching.py
+bytetrack/yolox/motdt_tracker/motdt_tracker.py
+bytetrack/yolox/motdt_tracker/reid_model.py
+bytetrack/yolox/sort_tracker/sort.py
+bytetrack/yolox/tracker/basetrack.py
+bytetrack/yolox/tracker/byte_tracker.py
+bytetrack/yolox/tracker/kalman_filter.py
+bytetrack/yolox/tracker/matching.py
+bytetrack/yolox/tracking_utils/evaluation.py
+bytetrack/yolox/tracking_utils/io.py
+bytetrack/yolox/tracking_utils/timer.py
+bytetrack/yolox/utils/__init__.py
+bytetrack/yolox/utils/allreduce_norm.py
+bytetrack/yolox/utils/boxes.py
+bytetrack/yolox/utils/checkpoint.py
+bytetrack/yolox/utils/demo_utils.py
+bytetrack/yolox/utils/dist.py
+bytetrack/yolox/utils/ema.py
+bytetrack/yolox/utils/logger.py
+bytetrack/yolox/utils/lr_scheduler.py
+bytetrack/yolox/utils/metric.py
+bytetrack/yolox/utils/model_utils.py
+bytetrack/yolox/utils/setup_env.py
+bytetrack/yolox/utils/visualize.py
+forked_repo/ByteTrack/setup.py
+forked_repo/ByteTrack/deploy/ONNXRuntime/onnx_inference.py
+forked_repo/ByteTrack/exps/default/nano.py
+forked_repo/ByteTrack/exps/default/yolov3.py
+forked_repo/ByteTrack/exps/default/yolox_l.py
+forked_repo/ByteTrack/exps/default/yolox_m.py
+forked_repo/ByteTrack/exps/default/yolox_s.py
+forked_repo/ByteTrack/exps/default/yolox_tiny.py
+forked_repo/ByteTrack/exps/default/yolox_x.py
+forked_repo/ByteTrack/exps/example/mot/yolox_l_mix_det.py
+forked_repo/ByteTrack/exps/example/mot/yolox_m_mix_det.py
+forked_repo/ByteTrack/exps/example/mot/yolox_nano_mix_det.py
+forked_repo/ByteTrack/exps/example/mot/yolox_s_mix_det.py
+forked_repo/ByteTrack/exps/example/mot/yolox_tiny_mix_det.py
+forked_repo/ByteTrack/exps/example/mot/yolox_x_ablation.py
+forked_repo/ByteTrack/exps/example/mot/yolox_x_ch.py
+forked_repo/ByteTrack/exps/example/mot/yolox_x_mix_det.py
+forked_repo/ByteTrack/exps/example/mot/yolox_x_mix_mot20_ch.py
+forked_repo/ByteTrack/exps/example/mot/yolox_x_mot17_half.py
+forked_repo/ByteTrack/tools/convert_cityperson_to_coco.py
+forked_repo/ByteTrack/tools/convert_crowdhuman_to_coco.py
+forked_repo/ByteTrack/tools/convert_ethz_to_coco.py
+forked_repo/ByteTrack/tools/convert_mot17_to_coco.py
+forked_repo/ByteTrack/tools/convert_mot20_to_coco.py
+forked_repo/ByteTrack/tools/convert_video.py
+forked_repo/ByteTrack/tools/demo_track.py
+forked_repo/ByteTrack/tools/export_onnx.py
+forked_repo/ByteTrack/tools/interpolation.py
+forked_repo/ByteTrack/tools/mix_data_ablation.py
+forked_repo/ByteTrack/tools/mix_data_test_mot17.py
+forked_repo/ByteTrack/tools/mix_data_test_mot20.py
+forked_repo/ByteTrack/tools/mota.py
+forked_repo/ByteTrack/tools/track.py
+forked_repo/ByteTrack/tools/track_deepsort.py
+forked_repo/ByteTrack/tools/track_motdt.py
+forked_repo/ByteTrack/tools/track_sort.py
+forked_repo/ByteTrack/tools/train.py
+forked_repo/ByteTrack/tools/trt.py
+forked_repo/ByteTrack/tools/txt2video.py
+forked_repo/ByteTrack/tutorials/centertrack/byte_tracker.py
+forked_repo/ByteTrack/tutorials/centertrack/opts.py
+forked_repo/ByteTrack/tutorials/centertrack/tracker.py
+forked_repo/ByteTrack/tutorials/centertrack/mot_online/basetrack.py
+forked_repo/ByteTrack/tutorials/centertrack/mot_online/kalman_filter.py
+forked_repo/ByteTrack/tutorials/centertrack/mot_online/matching.py
+forked_repo/ByteTrack/tutorials/cstrack/byte_tracker.py
+forked_repo/ByteTrack/tutorials/cstrack/tracker.py
+forked_repo/ByteTrack/tutorials/ctracker/byte_tracker.py
+forked_repo/ByteTrack/tutorials/ctracker/eval_motchallenge.py
+forked_repo/ByteTrack/tutorials/ctracker/generate_half_csv.py
+forked_repo/ByteTrack/tutorials/ctracker/test.py
+forked_repo/ByteTrack/tutorials/ctracker/test_byte.py
+forked_repo/ByteTrack/tutorials/ctracker/mot_online/basetrack.py
+forked_repo/ByteTrack/tutorials/ctracker/mot_online/kalman_filter.py
+forked_repo/ByteTrack/tutorials/ctracker/mot_online/matching.py
+forked_repo/ByteTrack/tutorials/fairmot/byte_tracker.py
+forked_repo/ByteTrack/tutorials/fairmot/tracker.py
+forked_repo/ByteTrack/tutorials/jde/byte_tracker.py
+forked_repo/ByteTrack/tutorials/jde/evaluation.py
+forked_repo/ByteTrack/tutorials/jde/track_half.py
+forked_repo/ByteTrack/tutorials/jde/tracker.py
+forked_repo/ByteTrack/tutorials/motr/byte_tracker.py
+forked_repo/ByteTrack/tutorials/motr/eval.py
+forked_repo/ByteTrack/tutorials/motr/evaluation.py
+forked_repo/ByteTrack/tutorials/motr/joint.py
+forked_repo/ByteTrack/tutorials/motr/motr.py
+forked_repo/ByteTrack/tutorials/motr/motr_det.py
+forked_repo/ByteTrack/tutorials/motr/transforms.py
+forked_repo/ByteTrack/tutorials/motr/mot_online/basetrack.py
+forked_repo/ByteTrack/tutorials/motr/mot_online/kalman_filter.py
+forked_repo/ByteTrack/tutorials/motr/mot_online/matching.py
+forked_repo/ByteTrack/tutorials/qdtrack/byte_tracker.py
+forked_repo/ByteTrack/tutorials/qdtrack/qdtrack.py
+forked_repo/ByteTrack/tutorials/qdtrack/tracker_reid_motion.py
+forked_repo/ByteTrack/tutorials/qdtrack/mot_online/basetrack.py
+forked_repo/ByteTrack/tutorials/qdtrack/mot_online/kalman_filter.py
+forked_repo/ByteTrack/tutorials/qdtrack/mot_online/matching.py
+forked_repo/ByteTrack/tutorials/trades/byte_tracker.py
+forked_repo/ByteTrack/tutorials/trades/opts.py
+forked_repo/ByteTrack/tutorials/trades/tracker.py
+forked_repo/ByteTrack/tutorials/trades/mot_online/basetrack.py
+forked_repo/ByteTrack/tutorials/trades/mot_online/kalman_filter.py
+forked_repo/ByteTrack/tutorials/trades/mot_online/matching.py
+forked_repo/ByteTrack/tutorials/transtrack/engine_track.py
+forked_repo/ByteTrack/tutorials/transtrack/main_track.py
+forked_repo/ByteTrack/tutorials/transtrack/save_track.py
+forked_repo/ByteTrack/tutorials/transtrack/tracker.py
+forked_repo/ByteTrack/tutorials/transtrack/mot_online/basetrack.py
+forked_repo/ByteTrack/tutorials/transtrack/mot_online/byte_tracker.py
+forked_repo/ByteTrack/tutorials/transtrack/mot_online/kalman_filter.py
+forked_repo/ByteTrack/tutorials/transtrack/mot_online/matching.py
+forked_repo/ByteTrack/yolox/__init__.py
+forked_repo/ByteTrack/yolox/core/__init__.py
+forked_repo/ByteTrack/yolox/core/launch.py
+forked_repo/ByteTrack/yolox/core/trainer.py
+forked_repo/ByteTrack/yolox/data/__init__.py
+forked_repo/ByteTrack/yolox/data/data_augment.py
+forked_repo/ByteTrack/yolox/data/data_prefetcher.py
+forked_repo/ByteTrack/yolox/data/dataloading.py
+forked_repo/ByteTrack/yolox/data/samplers.py
+forked_repo/ByteTrack/yolox/data/datasets/__init__.py
+forked_repo/ByteTrack/yolox/data/datasets/datasets_wrapper.py
+forked_repo/ByteTrack/yolox/data/datasets/mosaicdetection.py
+forked_repo/ByteTrack/yolox/data/datasets/mot.py
+forked_repo/ByteTrack/yolox/deepsort_tracker/deepsort.py
+forked_repo/ByteTrack/yolox/deepsort_tracker/detection.py
+forked_repo/ByteTrack/yolox/deepsort_tracker/iou_matching.py
+forked_repo/ByteTrack/yolox/deepsort_tracker/kalman_filter.py
+forked_repo/ByteTrack/yolox/deepsort_tracker/linear_assignment.py
+forked_repo/ByteTrack/yolox/deepsort_tracker/reid_model.py
+forked_repo/ByteTrack/yolox/deepsort_tracker/track.py
+forked_repo/ByteTrack/yolox/evaluators/__init__.py
+forked_repo/ByteTrack/yolox/evaluators/coco_evaluator.py
+forked_repo/ByteTrack/yolox/evaluators/evaluation.py
+forked_repo/ByteTrack/yolox/evaluators/mot_evaluator.py
+forked_repo/ByteTrack/yolox/exp/__init__.py
+forked_repo/ByteTrack/yolox/exp/base_exp.py
+forked_repo/ByteTrack/yolox/exp/build.py
+forked_repo/ByteTrack/yolox/exp/yolox_base.py
+forked_repo/ByteTrack/yolox/layers/__init__.py
+forked_repo/ByteTrack/yolox/layers/fast_coco_eval_api.py
+forked_repo/ByteTrack/yolox/models/__init__.py
+forked_repo/ByteTrack/yolox/models/darknet.py
+forked_repo/ByteTrack/yolox/models/losses.py
+forked_repo/ByteTrack/yolox/models/network_blocks.py
+forked_repo/ByteTrack/yolox/models/yolo_fpn.py
+forked_repo/ByteTrack/yolox/models/yolo_head.py
+forked_repo/ByteTrack/yolox/models/yolo_pafpn.py
+forked_repo/ByteTrack/yolox/models/yolox.py
+forked_repo/ByteTrack/yolox/motdt_tracker/basetrack.py
+forked_repo/ByteTrack/yolox/motdt_tracker/kalman_filter.py
+forked_repo/ByteTrack/yolox/motdt_tracker/matching.py
+forked_repo/ByteTrack/yolox/motdt_tracker/motdt_tracker.py
+forked_repo/ByteTrack/yolox/motdt_tracker/reid_model.py
+forked_repo/ByteTrack/yolox/sort_tracker/sort.py
+forked_repo/ByteTrack/yolox/tracker/basetrack.py
+forked_repo/ByteTrack/yolox/tracker/byte_tracker.py
+forked_repo/ByteTrack/yolox/tracker/kalman_filter.py
+forked_repo/ByteTrack/yolox/tracker/matching.py
+forked_repo/ByteTrack/yolox/tracking_utils/evaluation.py
+forked_repo/ByteTrack/yolox/tracking_utils/io.py
+forked_repo/ByteTrack/yolox/tracking_utils/timer.py
+forked_repo/ByteTrack/yolox/utils/__init__.py
+forked_repo/ByteTrack/yolox/utils/allreduce_norm.py
+forked_repo/ByteTrack/yolox/utils/boxes.py
+forked_repo/ByteTrack/yolox/utils/checkpoint.py
+forked_repo/ByteTrack/yolox/utils/demo_utils.py
+forked_repo/ByteTrack/yolox/utils/dist.py
+forked_repo/ByteTrack/yolox/utils/ema.py
+forked_repo/ByteTrack/yolox/utils/logger.py
+forked_repo/ByteTrack/yolox/utils/lr_scheduler.py
+forked_repo/ByteTrack/yolox/utils/metric.py
+forked_repo/ByteTrack/yolox/utils/model_utils.py
+forked_repo/ByteTrack/yolox/utils/setup_env.py
+forked_repo/ByteTrack/yolox/utils/visualize.py
+forked_repo/footballanalysis/Bird's eye view/arguments.py
+forked_repo/footballanalysis/Bird's eye view/main.py
+forked_repo/footballanalysis/Bird's eye view/deep_sort_pytorch/deep_sort/__init__.py
+forked_repo/footballanalysis/Bird's eye view/deep_sort_pytorch/deep_sort/deep_sort.py
+forked_repo/footballanalysis/Bird's eye view/deep_sort_pytorch/deep_sort/deep/__init__.py
+forked_repo/footballanalysis/Bird's eye view/deep_sort_pytorch/deep_sort/deep/evaluate.py
+forked_repo/footballanalysis/Bird's eye view/deep_sort_pytorch/deep_sort/deep/feature_extractor.py
+forked_repo/footballanalysis/Bird's eye view/deep_sort_pytorch/deep_sort/deep/model.py
+forked_repo/footballanalysis/Bird's eye view/deep_sort_pytorch/deep_sort/deep/original_model.py
+forked_repo/footballanalysis/Bird's eye view/deep_sort_pytorch/deep_sort/deep/test.py
+forked_repo/footballanalysis/Bird's eye view/deep_sort_pytorch/deep_sort/deep/train.py
+forked_repo/footballanalysis/Bird's eye view/deep_sort_pytorch/deep_sort/sort/__init__.py
+forked_repo/footballanalysis/Bird's eye view/deep_sort_pytorch/deep_sort/sort/detection.py
+forked_repo/footballanalysis/Bird's eye view/deep_sort_pytorch/deep_sort/sort/iou_matching.py
+forked_repo/footballanalysis/Bird's eye view/deep_sort_pytorch/deep_sort/sort/kalman_filter.py
+forked_repo/footballanalysis/Bird's eye view/deep_sort_pytorch/deep_sort/sort/linear_assignment.py
+forked_repo/footballanalysis/Bird's eye view/deep_sort_pytorch/deep_sort/sort/nn_matching.py
+forked_repo/footballanalysis/Bird's eye view/deep_sort_pytorch/deep_sort/sort/preprocessing.py
+forked_repo/footballanalysis/Bird's eye view/deep_sort_pytorch/deep_sort/sort/track.py
+forked_repo/footballanalysis/Bird's eye view/deep_sort_pytorch/deep_sort/sort/tracker.py
+forked_repo/footballanalysis/Bird's eye view/deep_sort_pytorch/utils/__init__.py
+forked_repo/footballanalysis/Bird's eye view/deep_sort_pytorch/utils/asserts.py
+forked_repo/footballanalysis/Bird's eye view/deep_sort_pytorch/utils/draw.py
+forked_repo/footballanalysis/Bird's eye view/deep_sort_pytorch/utils/evaluation.py
+forked_repo/footballanalysis/Bird's eye view/deep_sort_pytorch/utils/io.py
+forked_repo/footballanalysis/Bird's eye view/deep_sort_pytorch/utils/json_logger.py
+forked_repo/footballanalysis/Bird's eye view/deep_sort_pytorch/utils/log.py
+forked_repo/footballanalysis/Bird's eye view/deep_sort_pytorch/utils/parser.py
+forked_repo/footballanalysis/Bird's eye view/deep_sort_pytorch/utils/tools.py
+forked_repo/footballanalysis/Bird's eye view/elements/assets.py
+forked_repo/footballanalysis/Bird's eye view/elements/deep_sort.py
+forked_repo/footballanalysis/Bird's eye view/elements/perspective_transform.py
+forked_repo/footballanalysis/Bird's eye view/elements/yolo.py
+forked_repo/footballanalysis/Bird's eye view/perspective_transform/data/__init__.py
+forked_repo/footballanalysis/Bird's eye view/perspective_transform/data/aligned_dataset.py
+forked_repo/footballanalysis/Bird's eye view/perspective_transform/data/base_data_loader.py
+forked_repo/footballanalysis/Bird's eye view/perspective_transform/data/base_dataset.py
+forked_repo/footballanalysis/Bird's eye view/perspective_transform/data/custom_dataset_data_loader.py
+forked_repo/footballanalysis/Bird's eye view/perspective_transform/data/data_loader.py
+forked_repo/footballanalysis/Bird's eye view/perspective_transform/data/image_folder.py
+forked_repo/footballanalysis/Bird's eye view/perspective_transform/data/single_dataset.py
+forked_repo/footballanalysis/Bird's eye view/perspective_transform/data/two_aligned_dataset.py
+forked_repo/footballanalysis/Bird's eye view/perspective_transform/data/unaligned_dataset.py
+forked_repo/footballanalysis/Bird's eye view/perspective_transform/data_2/read_me.py
+forked_repo/footballanalysis/Bird's eye view/perspective_transform/deep/camera_dataset.py
+forked_repo/footballanalysis/Bird's eye view/perspective_transform/deep/contrastive_loss.py
+forked_repo/footballanalysis/Bird's eye view/perspective_transform/deep/siamese.py
+forked_repo/footballanalysis/Bird's eye view/perspective_transform/models/__init__.py
+forked_repo/footballanalysis/Bird's eye view/perspective_transform/models/base_model.py
+forked_repo/footballanalysis/Bird's eye view/perspective_transform/models/cycle_gan_model.py
+forked_repo/footballanalysis/Bird's eye view/perspective_transform/models/models.py
+forked_repo/footballanalysis/Bird's eye view/perspective_transform/models/networks.py
+forked_repo/footballanalysis/Bird's eye view/perspective_transform/models/pix2pix_model.py
+forked_repo/footballanalysis/Bird's eye view/perspective_transform/models/test_model.py
+forked_repo/footballanalysis/Bird's eye view/perspective_transform/models/two_pix2pix_model.py
+forked_repo/footballanalysis/Bird's eye view/perspective_transform/pytorch-two-GAN-master/test.py
+forked_repo/footballanalysis/Bird's eye view/perspective_transform/pytorch-two-GAN-master/test_two_pix2pix.py
+forked_repo/footballanalysis/Bird's eye view/perspective_transform/pytorch-two-GAN-master/train.py
+forked_repo/footballanalysis/Bird's eye view/perspective_transform/pytorch-two-GAN-master/train_two_pix2pix.py
+forked_repo/footballanalysis/Bird's eye view/perspective_transform/util/image_pool.py
+forked_repo/footballanalysis/Bird's eye view/perspective_transform/util/iou_util.py
+forked_repo/footballanalysis/Bird's eye view/perspective_transform/util/projective_camera.py
+forked_repo/footballanalysis/Bird's eye view/perspective_transform/util/rotation_util.py
+forked_repo/footballanalysis/Bird's eye view/perspective_transform/util/synthetic_util.py
+forked_repo/footballanalysis/Bird's eye view/perspective_transform/util/util.py
+forked_repo/footballanalysis/Bird's eye view/perspective_transform/util/visualizer.py
+forked_repo/footballanalysis/Bird's eye view/yolov5/models/__init__.py
+forked_repo/footballanalysis/Bird's eye view/yolov5/models/common.py
+forked_repo/footballanalysis/Bird's eye view/yolov5/models/experimental.py
+forked_repo/footballanalysis/Bird's eye view/yolov5/models/export.py
+forked_repo/footballanalysis/Bird's eye view/yolov5/models/yolo.py
+forked_repo/footballanalysis/Bird's eye view/yolov5/utils/__init__.py
+forked_repo/footballanalysis/Bird's eye view/yolov5/utils/activations.py
+forked_repo/footballanalysis/Bird's eye view/yolov5/utils/augmentation.py
+forked_repo/footballanalysis/Bird's eye view/yolov5/utils/autoanchor.py
+forked_repo/footballanalysis/Bird's eye view/yolov5/utils/datasets.py
+forked_repo/footballanalysis/Bird's eye view/yolov5/utils/general.py
+forked_repo/footballanalysis/Bird's eye view/yolov5/utils/google_utils.py
+forked_repo/footballanalysis/Bird's eye view/yolov5/utils/loss.py
+forked_repo/footballanalysis/Bird's eye view/yolov5/utils/metrics.py
+forked_repo/footballanalysis/Bird's eye view/yolov5/utils/plots.py
+forked_repo/footballanalysis/Bird's eye view/yolov5/utils/torch_utils.py
+forked_repo/footballanalysis/Keywords Spotting/__main__.py
+forked_repo/footballanalysis/Keywords Spotting/measure_power.py
+forked_repo/footballanalysis/Keywords Spotting/server.py
+forked_repo/footballanalysis/Keywords Spotting/service.py
+forked_repo/footballanalysis/Keywords Spotting/utils/__init__.py
+forked_repo/footballanalysis/Keywords Spotting/utils/client.py
+forked_repo/footballanalysis/Keywords Spotting/utils/manage_audio.py
+forked_repo/footballanalysis/Keywords Spotting/utils/model.py
+forked_repo/footballanalysis/Keywords Spotting/utils/record.py
+forked_repo/footballanalysis/Keywords Spotting/utils/spec_aug.py
+forked_repo/footballanalysis/Keywords Spotting/utils/speech_demo_tk.py
+forked_repo/footballanalysis/Keywords Spotting/utils/train.py
+forked_repo/footballanalysis/Keywords Spotting/utils/efficientnet_pytorch/__init__.py
+forked_repo/footballanalysis/Keywords Spotting/utils/efficientnet_pytorch/model.py
+forked_repo/footballanalysis/Keywords Spotting/utils/efficientnet_pytorch/utils.py
+forked_repo/footballanalysis/Perspective Transformation/python_codes/demo_image.py
+forked_repo/footballanalysis/Perspective Transformation/python_codes/demo_video.py
+forked_repo/footballanalysis/Perspective Transformation/python_codes/data/__init__.py
+forked_repo/footballanalysis/Perspective Transformation/python_codes/data/aligned_dataset.py
+forked_repo/footballanalysis/Perspective Transformation/python_codes/data/base_data_loader.py
+forked_repo/footballanalysis/Perspective Transformation/python_codes/data/base_dataset.py
+forked_repo/footballanalysis/Perspective Transformation/python_codes/data/custom_dataset_data_loader.py
+forked_repo/footballanalysis/Perspective Transformation/python_codes/data/data_loader.py
+forked_repo/footballanalysis/Perspective Transformation/python_codes/data/image_folder.py
+forked_repo/footballanalysis/Perspective Transformation/python_codes/data/single_dataset.py
+forked_repo/footballanalysis/Perspective Transformation/python_codes/data/two_aligned_dataset.py
+forked_repo/footballanalysis/Perspective Transformation/python_codes/data/unaligned_dataset.py
+forked_repo/footballanalysis/Perspective Transformation/python_codes/data_2/read_me.py
+forked_repo/footballanalysis/Perspective Transformation/python_codes/deep/camera_dataset.py
+forked_repo/footballanalysis/Perspective Transformation/python_codes/deep/contrastive_loss.py
+forked_repo/footballanalysis/Perspective Transformation/python_codes/deep/generate_train_data.py
+forked_repo/footballanalysis/Perspective Transformation/python_codes/deep/my_network_test.py
+forked_repo/footballanalysis/Perspective Transformation/python_codes/deep/network_test.py
+forked_repo/footballanalysis/Perspective Transformation/python_codes/deep/network_train.py
+forked_repo/footballanalysis/Perspective Transformation/python_codes/deep/siamese.py
+forked_repo/footballanalysis/Perspective Transformation/python_codes/deep/test.py
+forked_repo/footballanalysis/Perspective Transformation/python_codes/hog/generate_database_hog.py
+forked_repo/footballanalysis/Perspective Transformation/python_codes/hog/generate_test_feature_hog.py
+forked_repo/footballanalysis/Perspective Transformation/python_codes/hog/my_generate_test_feature_hog.py
+forked_repo/footballanalysis/Perspective Transformation/python_codes/hog/my_generation.py
+forked_repo/footballanalysis/Perspective Transformation/python_codes/models/__init__.py
+forked_repo/footballanalysis/Perspective Transformation/python_codes/models/base_model.py
+forked_repo/footballanalysis/Perspective Transformation/python_codes/models/cycle_gan_model.py
+forked_repo/footballanalysis/Perspective Transformation/python_codes/models/models.py
+forked_repo/footballanalysis/Perspective Transformation/python_codes/models/networks.py
+forked_repo/footballanalysis/Perspective Transformation/python_codes/models/pix2pix_model.py
+forked_repo/footballanalysis/Perspective Transformation/python_codes/models/test_model.py
+forked_repo/footballanalysis/Perspective Transformation/python_codes/models/two_pix2pix_model.py
+forked_repo/footballanalysis/Perspective Transformation/python_codes/options/__init__.py
+forked_repo/footballanalysis/Perspective Transformation/python_codes/options/base_options.py
+forked_repo/footballanalysis/Perspective Transformation/python_codes/options/test_options.py
+forked_repo/footballanalysis/Perspective Transformation/python_codes/options/train_options.py
+forked_repo/footballanalysis/Perspective Transformation/python_codes/pytorch-two-GAN-master/test.py
+forked_repo/footballanalysis/Perspective Transformation/python_codes/pytorch-two-GAN-master/test_two_pix2pix.py
+forked_repo/footballanalysis/Perspective Transformation/python_codes/pytorch-two-GAN-master/train.py
+forked_repo/footballanalysis/Perspective Transformation/python_codes/pytorch-two-GAN-master/train_two_pix2pix.py
+forked_repo/footballanalysis/Perspective Transformation/python_codes/pytorch-two-GAN-master/datasets/combine_A_and_B.py
+forked_repo/footballanalysis/Perspective Transformation/python_codes/util/get_data.py
+forked_repo/footballanalysis/Perspective Transformation/python_codes/util/html.py
+forked_repo/footballanalysis/Perspective Transformation/python_codes/util/image_pool.py
+forked_repo/footballanalysis/Perspective Transformation/python_codes/util/iou_util.py
+forked_repo/footballanalysis/Perspective Transformation/python_codes/util/projective_camera.py
+forked_repo/footballanalysis/Perspective Transformation/python_codes/util/rotation_util.py
+forked_repo/footballanalysis/Perspective Transformation/python_codes/util/synthetic_util.py
+forked_repo/footballanalysis/Perspective Transformation/python_codes/util/util.py
+forked_repo/footballanalysis/Perspective Transformation/python_codes/util/visualizer.py
+forked_repo/footballanalysis/Virtual advertising/python_codes/LCNN_GAN/GAN/test.py
+forked_repo/footballanalysis/Virtual advertising/python_codes/LCNN_GAN/GAN/test_image.py
+forked_repo/footballanalysis/Virtual advertising/python_codes/LCNN_GAN/GAN/test_video.py
+forked_repo/footballanalysis/Virtual advertising/python_codes/LCNN_GAN/GAN/train.py
+forked_repo/footballanalysis/Virtual advertising/python_codes/LCNN_GAN/GAN/data/__init__.py
+forked_repo/footballanalysis/Virtual advertising/python_codes/LCNN_GAN/GAN/data/aligned_dataset.py
+forked_repo/footballanalysis/Virtual advertising/python_codes/LCNN_GAN/GAN/data/base_data_loader.py
+forked_repo/footballanalysis/Virtual advertising/python_codes/LCNN_GAN/GAN/data/base_dataset.py
+forked_repo/footballanalysis/Virtual advertising/python_codes/LCNN_GAN/GAN/data/custom_dataset_data_loader.py
+forked_repo/footballanalysis/Virtual advertising/python_codes/LCNN_GAN/GAN/data/data_loader.py
+forked_repo/footballanalysis/Virtual advertising/python_codes/LCNN_GAN/GAN/data/image_folder.py
+forked_repo/footballanalysis/Virtual advertising/python_codes/LCNN_GAN/GAN/data/single_dataset.py
+forked_repo/footballanalysis/Virtual advertising/python_codes/LCNN_GAN/GAN/data/two_aligned_dataset.py
+forked_repo/footballanalysis/Virtual advertising/python_codes/LCNN_GAN/GAN/data/unaligned_dataset.py
+forked_repo/footballanalysis/Virtual advertising/python_codes/LCNN_GAN/GAN/models/__init__.py
+forked_repo/footballanalysis/Virtual advertising/python_codes/LCNN_GAN/GAN/models/base_model.py
+forked_repo/footballanalysis/Virtual advertising/python_codes/LCNN_GAN/GAN/models/cycle_gan_model.py
+forked_repo/footballanalysis/Virtual advertising/python_codes/LCNN_GAN/GAN/models/models.py
+forked_repo/footballanalysis/Virtual advertising/python_codes/LCNN_GAN/GAN/models/networks.py
+forked_repo/footballanalysis/Virtual advertising/python_codes/LCNN_GAN/GAN/models/pix2pix_model.py
+forked_repo/footballanalysis/Virtual advertising/python_codes/LCNN_GAN/GAN/models/test_model.py
+forked_repo/footballanalysis/Virtual advertising/python_codes/LCNN_GAN/GAN/models/two_pix2pix_model.py
+forked_repo/footballanalysis/Virtual advertising/python_codes/LCNN_GAN/GAN/options/__init__.py
+forked_repo/footballanalysis/Virtual advertising/python_codes/LCNN_GAN/GAN/options/base_options.py
+forked_repo/footballanalysis/Virtual advertising/python_codes/LCNN_GAN/GAN/options/test_options.py
+forked_repo/footballanalysis/Virtual advertising/python_codes/LCNN_GAN/GAN/options/train_options.py
+forked_repo/footballanalysis/Virtual advertising/python_codes/LCNN_GAN/GAN/util/__init__.py
+forked_repo/footballanalysis/Virtual advertising/python_codes/LCNN_GAN/GAN/util/get_data.py
+forked_repo/footballanalysis/Virtual advertising/python_codes/LCNN_GAN/GAN/util/html.py
+forked_repo/footballanalysis/Virtual advertising/python_codes/LCNN_GAN/GAN/util/image_pool.py
+forked_repo/footballanalysis/Virtual advertising/python_codes/LCNN_GAN/GAN/util/util.py
+forked_repo/footballanalysis/Virtual advertising/python_codes/LCNN_GAN/GAN/util/visualizer.py
+forked_repo/footballanalysis/Virtual advertising/python_codes/LCNN_GAN/dataset/wireframe.py
+forked_repo/footballanalysis/Virtual advertising/python_codes/LCNN_GAN/dataset/york.py
+forked_repo/footballanalysis/Virtual advertising/python_codes/LCNN_GAN/lcnn/__init__.py
+forked_repo/footballanalysis/Virtual advertising/python_codes/LCNN_GAN/lcnn/box.py
+forked_repo/footballanalysis/Virtual advertising/python_codes/LCNN_GAN/lcnn/config.py
+forked_repo/footballanalysis/Virtual advertising/python_codes/LCNN_GAN/lcnn/datasets.py
+forked_repo/footballanalysis/Virtual advertising/python_codes/LCNN_GAN/lcnn/metric.py
+forked_repo/footballanalysis/Virtual advertising/python_codes/LCNN_GAN/lcnn/postprocess.py
+forked_repo/footballanalysis/Virtual advertising/python_codes/LCNN_GAN/lcnn/trainer.py
+forked_repo/footballanalysis/Virtual advertising/python_codes/LCNN_GAN/lcnn/utils.py
+forked_repo/footballanalysis/Virtual advertising/python_codes/LCNN_GAN/lcnn/models/__init__.py
+forked_repo/footballanalysis/Virtual advertising/python_codes/LCNN_GAN/lcnn/models/hourglass_pose.py
+forked_repo/footballanalysis/Virtual advertising/python_codes/LCNN_GAN/lcnn/models/line_vectorizer.py
+forked_repo/footballanalysis/Virtual advertising/python_codes/LCNN_GAN/lcnn/models/multitask_learner.py
+forked_repo/footballanalysis/Virtual advertising/python_codes/LCNN_GAN/misc/draw-wireframe.py
+forked_repo/footballanalysis/Virtual advertising/python_codes/LCNN_GAN/misc/lsd.py
+forked_repo/footballanalysis/Virtual advertising/python_codes/LCNN_GAN/misc/plot-sAP.py
+forked_repo/soccer-video-analytics/run.py
+forked_repo/soccer-video-analytics/run_utils.py
+forked_repo/soccer-video-analytics/inference/__init__.py
+forked_repo/soccer-video-analytics/inference/base_classifier.py
+forked_repo/soccer-video-analytics/inference/base_detector.py
+forked_repo/soccer-video-analytics/inference/box.py
+forked_repo/soccer-video-analytics/inference/colors.py
+forked_repo/soccer-video-analytics/inference/converter.py
+forked_repo/soccer-video-analytics/inference/filters.py
+forked_repo/soccer-video-analytics/inference/hsv_classifier.py
+forked_repo/soccer-video-analytics/inference/inertia_classifier.py
+forked_repo/soccer-video-analytics/inference/nn_classifier.py
+forked_repo/soccer-video-analytics/inference/yolov5.py
+forked_repo/soccer-video-analytics/soccer/__init__.py
+forked_repo/soccer-video-analytics/soccer/ball.py
+forked_repo/soccer-video-analytics/soccer/draw.py
+forked_repo/soccer-video-analytics/soccer/match.py
+forked_repo/soccer-video-analytics/soccer/pass_event.py
+forked_repo/soccer-video-analytics/soccer/player.py
+forked_repo/soccer-video-analytics/soccer/team.py
+tracker/__init__.py
+tracker/arguments.py
+tracker/football_track.py
+tracker/football_track_byetrack.py
+tracker/football_track_bytetack_config.py
+tracker/helper.py
+tracker/inference/black.jpg
+tracker/perspective_transform/data/__init__.py
+tracker/perspective_transform/data/aligned_dataset.py
+tracker/perspective_transform/data/base_data_loader.py
+tracker/perspective_transform/data/base_dataset.py
+tracker/perspective_transform/data/custom_dataset_data_loader.py
+tracker/perspective_transform/data/data_loader.py
+tracker/perspective_transform/data/image_folder.py
+tracker/perspective_transform/data/single_dataset.py
+tracker/perspective_transform/data/two_aligned_dataset.py
+tracker/perspective_transform/data/unaligned_dataset.py
+tracker/perspective_transform/data_2/my_plot_field.m
+tracker/perspective_transform/data_2/read_me.py
+tracker/perspective_transform/deep/camera_dataset.py
+tracker/perspective_transform/deep/contrastive_loss.py
+tracker/perspective_transform/deep/siamese.py
+tracker/perspective_transform/homography/matrix.npy
+tracker/perspective_transform/models/__init__.py
+tracker/perspective_transform/models/base_model.py
+tracker/perspective_transform/models/cycle_gan_model.py
+tracker/perspective_transform/models/models.py
+tracker/perspective_transform/models/networks.py
+tracker/perspective_transform/models/pix2pix_model.py
+tracker/perspective_transform/models/test_model.py
+tracker/perspective_transform/models/two_pix2pix_model.py
+tracker/perspective_transform/pytorch-two-GAN-master/test.py
+tracker/perspective_transform/pytorch-two-GAN-master/test_two_pix2pix.py
+tracker/perspective_transform/pytorch-two-GAN-master/train.py
+tracker/perspective_transform/pytorch-two-GAN-master/train_two_pix2pix.py
+tracker/perspective_transform/util/image_pool.py
+tracker/perspective_transform/util/iou_util.py
+tracker/perspective_transform/util/projective_camera.py
+tracker/perspective_transform/util/rotation_util.py
+tracker/perspective_transform/util/synthetic_util.py
+tracker/perspective_transform/util/util.py
+tracker/perspective_transform/util/visualizer.py
+tracker/soccer/__init__.py
+tracker/soccer/ball.py
+tracker/soccer/draw.py
+tracker/soccer/match.py
+tracker/soccer/pass_event.py
+tracker/soccer/player.py
+tracker/soccer/team.py
+tracker/team_matching/team_match.py
+tracker/utils/helper.py
+tracker/utils/perspective_transform.py
+video_demo/bench.mov
+yolox/_C.cpython-37m-darwin.so
+yolox/_C.cpython-38-darwin.so
+yolox/__init__.py
+yolox.egg-info/PKG-INFO
+yolox.egg-info/SOURCES.txt
+yolox.egg-info/dependency_links.txt
+yolox.egg-info/top_level.txt
+yolox/core/__init__.py
+yolox/core/launch.py
+yolox/core/trainer.py
+yolox/data/__init__.py
+yolox/data/data_augment.py
+yolox/data/data_prefetcher.py
+yolox/data/dataloading.py
+yolox/data/samplers.py
+yolox/data/datasets/__init__.py
+yolox/data/datasets/datasets_wrapper.py
+yolox/data/datasets/mosaicdetection.py
+yolox/data/datasets/mot.py
+yolox/deepsort_tracker/deepsort.py
+yolox/deepsort_tracker/detection.py
+yolox/deepsort_tracker/iou_matching.py
+yolox/deepsort_tracker/kalman_filter.py
+yolox/deepsort_tracker/linear_assignment.py
+yolox/deepsort_tracker/reid_model.py
+yolox/deepsort_tracker/track.py
+yolox/evaluators/__init__.py
+yolox/evaluators/coco_evaluator.py
+yolox/evaluators/evaluation.py
+yolox/evaluators/mot_evaluator.py
+yolox/exp/__init__.py
+yolox/exp/base_exp.py
+yolox/exp/build.py
+yolox/exp/yolox_base.py
+yolox/layers/__init__.py
+yolox/layers/fast_coco_eval_api.py
+yolox/layers/csrc/vision.cpp
+yolox/layers/csrc/cocoeval/cocoeval.cpp
+yolox/layers/csrc/cocoeval/cocoeval.h
+yolox/models/__init__.py
+yolox/models/darknet.py
+yolox/models/losses.py
+yolox/models/network_blocks.py
+yolox/models/yolo_fpn.py
+yolox/models/yolo_head.py
+yolox/models/yolo_pafpn.py
+yolox/models/yolox.py
+yolox/motdt_tracker/basetrack.py
+yolox/motdt_tracker/kalman_filter.py
+yolox/motdt_tracker/matching.py
+yolox/motdt_tracker/motdt_tracker.py
+yolox/motdt_tracker/reid_model.py
+yolox/sort_tracker/sort.py
+yolox/tracker/basetrack.py
+yolox/tracker/byte_tracker.py
+yolox/tracker/kalman_filter.py
+yolox/tracker/matching.py
+yolox/tracking_utils/evaluation.py
+yolox/tracking_utils/io.py
+yolox/tracking_utils/timer.py
+yolox/utils/__init__.py
+yolox/utils/allreduce_norm.py
+yolox/utils/boxes.py
+yolox/utils/checkpoint.py
+yolox/utils/demo_utils.py
+yolox/utils/dist.py
+yolox/utils/ema.py
+yolox/utils/logger.py
+yolox/utils/lr_scheduler.py
+yolox/utils/metric.py
+yolox/utils/model_utils.py
+yolox/utils/setup_env.py
+yolox/utils/visualize.py
