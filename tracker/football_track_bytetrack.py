@@ -430,8 +430,8 @@ class Predictor(object):
         exp,
         trt_file=None,
         decoder=None,
-        device=torch.device(torch.device(
-            'cuda' if torch.cuda.is_available() else 'cpu')),
+        device=torch.device(
+            'cuda' if torch.cuda.is_available() else 'cpu'),
         fp16=False
     ):
         self.model = model

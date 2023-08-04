@@ -7,3 +7,4 @@ forked_repo/*
 bytetrack/pretrained/*
 weights/*
 video_demo/*
+*.mp4

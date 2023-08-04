@@ -10,17 +10,13 @@ def find_key(dictionary, value):
     return None
 
 
-pallete = {'b': (0, 0, 128),
+pallete = {
            'green': (0, 128, 0),
            'red': (200, 16, 46),
-           'c': (0, 192, 192),
-           'm': (192, 0, 192),
-           'y': (192, 192, 0),
            'white': (255, 255, 255),
            'blue': (81, 88, 117),
-           'cyan': (108, 171, 221),
 
-           }
+}
 
 color_for_labels = (2 ** 11 - 1, 2 ** 15 - 1, 2 ** 20 - 1)
 
