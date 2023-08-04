@@ -17,7 +17,8 @@ class Exp(MyExp):
         self.warmup_epochs = 1
         self.max_epoch = 300
         self.input_size = (1088, 1920)
-        self.test_size = (1088, 1920)
+        # self.test_size = (1088, 1920)
+        self.test_size = (608, 1088)
 
         # ---------- transform config ------------ #
         self.mosaic_prob = 1.0

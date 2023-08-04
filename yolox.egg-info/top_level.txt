@@ -2,6 +2,7 @@ YOLOX_outputs
 build
 bytetrack
 forked_repo
+frame
 image_demo
 tracker
 video_demo

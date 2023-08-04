@@ -14,8 +14,7 @@ from yolox.utils.visualize import plot_tracking
 from yolox.tracker.byte_tracker import BYTETracker
 from yolox.tracking_utils.timer import Timer
 import matplotlib.pyplot as plt
-from utils.helper import transform_matrix, detect_color
-from utils.perspective_transform import Perspective_Transform
+from utils.helper import detect_color
 from tracker.helper import imgByteToNumpy
 import torch
 from yolox.data import ValTransform
@@ -26,7 +25,6 @@ class Football_bytetrack():
     def __init__(self) -> None:
         self.args = self.load_argument(args)
         self.exp = get_exp(self.args.exp_file, self.args.name)
-        self.perspective_transform = Perspective_Transform()
 
         if self.args.conf is not None:
             self.exp.test_conf = self.args.conf
@@ -75,9 +73,6 @@ class Football_bytetrack():
         timer = Timer()
 
         outputs, img_info = self.predictor.inference(img, timer)
-
-        M, warped_img = self.perspective_transform.homography_matrix(
-            img_info["raw_img"])
 
         if outputs[0] is not None:
 
@@ -134,11 +129,6 @@ class Football_bytetrack():
 
             main_frame = img_info["raw_img"]
 
-            if frame_id % 5 == 0:
-                M, warped_image = self.perspective_transform.homography_matrix(
-                    main_frame
-                )
-
             if outputs[0] is not None:
                 online_targets, labels, bboxes = tracker.update(
                     outputs[0], [img_info['height'], img_info['width']], self.exp.test_size)
@@ -159,15 +149,9 @@ class Football_bytetrack():
 
                         x, y, w, h = tlwh
                         x, y, w, h = int(x), int(y), int(w), int(h)
-                        x_center, y_center = x, y + h // 2
+                        x_center, y_center = x + w // 2, y + h // 2
 
-                        coords = transform_matrix(
-                            M, (x_center, y_center), (img_info["height"], img_info["width"]), (gt_h, gt_w))
-
-                        if coords[0] < 0:
-                            l = list(coords)
-                            l[0] = 0
-                            coords = tuple(l)
+                        print(x, y, w, h)
 
                         results.append({
                             "x": x,
@@ -177,10 +161,18 @@ class Football_bytetrack():
                             "label": labels[i]
                         })
 
+                        print(i, x_center, y_center)
+                        print(main_frame.shape)
+
                         color, __dict__ = detect_color(
                             main_frame[y: y+h, x: x+w])
 
-                        cv2.circle(bg_img, coords, bg_ratio + 1, color, -1)
+                        cv2.imshow("img", main_frame[y: y+h, x: x+w])
+                        cv2.waitKey(0)
+                        cv2.destroyAllWindows()
+                        cv2.waitKey(1)
+
+                        # cv2.circle(bg_img, coords, bg_ratio + 1, color, -1)
                     else:
                         bg_img = cv2.putText(bg_img, 'Too close', (gt_w // 2, gt_h // 2), cv2.FONT_HERSHEY_COMPLEX,
                                              1.4, (255, 255, 255), 2,  cv2.LINE_AA)
@@ -190,11 +182,12 @@ class Football_bytetrack():
                 online_im = plot_tracking(
                     img_info['raw_img'], online_tlwhs, online_ids, frame_id=frame_id, fps=1. /
                     1)
-                cv2.imshow("bg", online_im)
-                cv2.waitKey(0)
-                cv2.destroyAllWindows()
-                cv2.waitKey(1)
-                stack = self.img_vertical_stack(online_im, bg_img)
+
+                # stack = self.img_vertical_stack(online_im, bg_img)
+                # cv2.imshow("bg", stack)
+                # cv2.waitKey(0)
+                # cv2.destroyAllWindows()
+                # cv2.waitKey(1)
 
         if self.args.save_result:
             timestamp = time.strftime("%Y_%m_%d_%H_%M_%S", current_time)
@@ -202,7 +195,7 @@ class Football_bytetrack():
 
             os.makedirs(save_folder, exist_ok=True)
             cv2.imwrite(
-                osp.join(save_folder, osp.basename(img_path)), stack)
+                osp.join(save_folder, osp.basename(img_path)), online_im)
 
         return results
 
@@ -231,6 +224,9 @@ class Football_bytetrack():
         else:
             save_path = osp.join(save_folder, "camera.mp4")
 
+        vid_writer = cv2.VideoWriter(
+            save_path, cv2.VideoWriter_fourcc(
+                *"mp4v"), fps, (int(width), int(height)))
         logger.info(f"video save_path is {save_path}")
 
         tracker = BYTETracker(self.args, frame_rate=30)
@@ -240,19 +236,14 @@ class Football_bytetrack():
 
         while True:
             bg_img = gt_img.copy()
-
-            if frame_id % 20 == 0:
+            if frame_id % 20 == 0 and frame_id != 0:
                 logger.info('Processing frame {} ({:.2f} fps)'.format(
                     frame_id, 1. / max(1e-5, timer.average_time)))
+
             ret_val, frame = cap.read()
             if ret_val:
                 outputs, img_info = predictor.inference(frame, timer)
                 main_frame = frame.copy()
-
-                if frame_id % 5 == 0:
-                    M, warped_image = self.perspective_transform.homography_matrix(
-                        main_frame
-                    )
 
                 if outputs[0] is not None:
                     online_targets, _, _ = tracker.update(
@@ -287,17 +278,14 @@ class Football_bytetrack():
 
                             x_center, y_center = x + w // 2, y + h // 2
 
-                            coords = transform_matrix(
-                                M, (x_center, y_center), (height, width), (gt_h, gt_w))
-
                             color, key = detect_color(crop)
 
-                            if t.label == "sports ball":
-                                cv2.circle(bg_img, coords,
-                                           bg_ratio + 1, (0, 255, 255), -1)
-                            else:
-                                cv2.circle(bg_img, coords,
-                                           bg_ratio + 1, color, -1)
+                            # if t.label == "sports ball":
+                            #     cv2.circle(bg_img, coords,
+                            #                bg_ratio + 1, (0, 255, 255), -1)
+                            # else:
+                            #     cv2.circle(bg_img, coords,
+                            #                bg_ratio + 1, color, -1)
 
                             results.append(
                                 f"{frame_id},{tid},{tlwh[0]:.2f},{tlwh[1]:.2f},{tlwh[2]:.2f},{tlwh[3]:.2f},{t.score:.2f},{t.label},{x_center},{y_center},{key}.  \n"
@@ -313,20 +301,10 @@ class Football_bytetrack():
                         img_info['raw_img'], online_tlwhs, online_ids, frame_id=frame_id + 1, fps=1. / timer.average_time
                     )
 
-                    stack = self.img_vertical_stack(online_im, bg_img)
-                    cv2.imshow("bg", stack)
-                    cv2.waitKey(0)
-                    cv2.destroyAllWindows()
-                    cv2.waitKey(1)
-
-                    if (frame_id == 0):
-                        vid_writer = cv2.VideoWriter(
-                            save_path, cv2.VideoWriter_fourcc(
-                                *"mp4v"), fps, (int(stack.shape[1]), int(stack.shape[0])))
                 else:
                     online_im = img_info['raw_img']
                 if self.args.save_result:
-                    vid_writer.write(stack)
+                    vid_writer.write(online_im)
             else:
                 break
 
@@ -343,7 +321,7 @@ class Football_bytetrack():
     def img_vertical_stack(self, top, bottom):
         pad = np.full(top.shape, fill_value=[255, 255, 255])
 
-        pad[100: 100 + bottom.shape[0],
+        pad[200: 100 + bottom.shape[0],
             200: 200 + bottom.shape[1]] = bottom
 
         stack = np.vstack((top, pad))
@@ -491,7 +469,9 @@ class Predictor(object):
         img_info["width"] = width
         img_info["raw_img"] = img
 
+        # img, ratio = preproc(img, self.test_size, self.rgb_means, self.std)
         img, ratio = self.preproc(img, None,  self.test_size)
+        print(img.shape)
 
         img_info["ratio"] = ratio
 
@@ -517,5 +497,3 @@ if __name__ == "__main__":
     __package__ = ''
     tracker = Football_bytetrack()
     tracker.track()
-
-

@@ -472,8 +472,8 @@ forked_repo/soccer-video-analytics/soccer/team.py
 tracker/__init__.py
 tracker/arguments.py
 tracker/football_track.py
-tracker/football_track_byetrack.py
 tracker/football_track_bytetack_config.py
+tracker/football_track_bytetrack.py
 tracker/helper.py
 tracker/inference/black.jpg
 tracker/perspective_transform/data/__init__.py
@@ -511,17 +511,9 @@ tracker/perspective_transform/util/rotation_util.py
 tracker/perspective_transform/util/synthetic_util.py
 tracker/perspective_transform/util/util.py
 tracker/perspective_transform/util/visualizer.py
-tracker/soccer/__init__.py
-tracker/soccer/ball.py
-tracker/soccer/draw.py
-tracker/soccer/match.py
-tracker/soccer/pass_event.py
-tracker/soccer/player.py
-tracker/soccer/team.py
 tracker/team_matching/team_match.py
 tracker/utils/helper.py
 tracker/utils/perspective_transform.py
-video_demo/bench.mov
 yolox/_C.cpython-37m-darwin.so
 yolox/_C.cpython-38-darwin.so
 yolox/__init__.py
