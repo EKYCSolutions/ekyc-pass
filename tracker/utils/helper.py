@@ -1,6 +1,7 @@
 import cv2
 from sklearn.cluster import KMeans
 import numpy as np
+import stitching
 
 
 def find_key(dictionary, value):
@@ -11,10 +12,10 @@ def find_key(dictionary, value):
 
 
 pallete = {
-           'green': (0, 128, 0),
-           'red': (200, 16, 46),
-           'white': (255, 255, 255),
-           'blue': (81, 88, 117),
+    'green': (0, 128, 0),
+    'red': (200, 16, 46),
+    'white': (255, 255, 255),
+    'blue': (81, 88, 117),
 
 }
 
@@ -166,3 +167,49 @@ def closest_color(list_of_colors, color):
     shortest_distance = colors[index_of_shortest]
 
     return shortest_distance
+
+
+def image_stitch(img_src, show=True,   config={"detector": "sift", "confidence_threshold": 0.3, }):
+    stitcher = stitching.Stitcher(**config)
+    imgOutput = stitcher.stitch(img_src)
+    if show:
+        cv2.imshow("stitch", imgOutput)
+        cv2.waitKey(0)
+        cv2.destroyAllWindows()
+        cv2.waitKey(1)
+    return imgOutput
+
+
+def fourPointOnClick(image_path: str):
+    # Load the image
+    if type(image_path) == str:
+        img = cv2.imread(image_path)
+    else:
+        img = image_path
+
+    # Create a window to display the image
+    cv2.namedWindow('Image')
+
+    # Initialize a list to store the four points
+    points = []
+
+    def click_event(event, x, y, flags, param):
+        if event == cv2.EVENT_LBUTTONDOWN:
+            # Append the clicked point to the list
+            points.append((x, y))
+            # Draw a circle at the clicked point on the image
+            cv2.circle(img, (x, y), 5, (0, 255, 0), -1)
+            # Display the image with the clicked point
+            cv2.imshow('Image', img)
+
+    # Set the mouse callback function to handle mouse events
+    cv2.setMouseCallback('Image', click_event)
+
+    # Display the image and wait for the user to click four points
+    cv2.imshow('Image', img)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
+    cv2.waitKey(1)
+
+    # Convert the list of points to a NumPy array and return it
+    return np.array(points, dtype=np.float32)

@@ -471,7 +471,6 @@ class Predictor(object):
 
         # img, ratio = preproc(img, self.test_size, self.rgb_means, self.std)
         img, ratio = self.preproc(img, None,  self.test_size)
-        print(img.shape)
 
         img_info["ratio"] = ratio
 
