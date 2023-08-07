@@ -2,7 +2,10 @@ import cv2
 from sklearn.cluster import KMeans
 import numpy as np
 import stitching
-
+from mplsoccer import Pitch, VerticalPitch
+from matplotlib.colors import LinearSegmentedColormap
+import warnings
+warnings.filterwarnings("ignore")
 
 def find_key(dictionary, value):
     for key, val in dictionary.items():
@@ -129,7 +132,7 @@ def detect_color(img):
     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
     img = img.reshape((img.shape[1]*img.shape[0], 3))
 
-    kmeans = KMeans(n_clusters=2)
+    kmeans = KMeans(n_clusters=2, n_init=10)
     s = kmeans.fit(img)
 
     labels = kmeans.labels_
@@ -213,3 +216,28 @@ def fourPointOnClick(image_path: str):
 
     # Convert the list of points to a NumPy array and return it
     return np.array(points, dtype=np.float32)
+
+
+def plot_heatmap(x, y): 
+   
+    el_greco_yellow_cmap = LinearSegmentedColormap.from_list("El Greco Yellow - 10 colors",
+                                                            ['#fae96b', '#d84e3e'])
+    pitch = Pitch(pitch_color='grass', line_zorder=2,  line_color='white', pitch_width=120, pitch_length=80, stripe=True)
+    
+    pearl_earring_cmap_100 = LinearSegmentedColormap.from_list("Pearl Earring - 100 colors",
+                                                            ['#15242e', '#4393c4'], N=100)
+
+    fig, ax = pitch.draw(figsize=(4.4, 6.4))
+    kdeplot = pitch.kdeplot(x , y, ax=ax, cmap=el_greco_yellow_cmap, fill=True)
+
+
+def process_df(df): 
+
+    # Extract values from columns x_center and y_center and put them in a list of lists
+    positions = df[['x_center', 'y_center']].values.tolist()
+    labels = df["label"].values
+    color = df["color"].values
+
+    return positions, labels, color,
+
+

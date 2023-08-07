@@ -3,8 +3,10 @@ import os
 import os.path as osp
 import time
 import cv2
+import io   
+import pandas as pd 
 import torch
-from football_track_bytetack_config import args
+from .football_track_bytetack_config import args
 from loguru import logger
 import numpy as np
 from yolox.exp import get_exp
@@ -14,7 +16,7 @@ from yolox.utils.visualize import plot_tracking
 from yolox.tracker.byte_tracker import BYTETracker
 from yolox.tracking_utils.timer import Timer
 import matplotlib.pyplot as plt
-from utils.helper import detect_color
+from .utils.helper import detect_color
 from tracker.helper import imgByteToNumpy
 import torch
 from yolox.data import ValTransform
@@ -128,8 +130,14 @@ class Football_bytetrack():
             bg_img = gt_img.copy()
 
             main_frame = img_info["raw_img"]
+            cv2.imshow("img", main_frame)
+            cv2.waitKey(0)
+            cv2.destroyAllWindows()
+     
+           
 
             if outputs[0] is not None:
+                print(len(outputs[0][:, :4]))
                 online_targets, labels, bboxes = tracker.update(
                     outputs[0], [img_info['height'], img_info['width']], self.exp.test_size)
 
@@ -153,24 +161,12 @@ class Football_bytetrack():
 
                         print(x, y, w, h)
 
-                        results.append({
-                            "x": x,
-                            "y": y,
-                            "w": w,
-                            "h": h,
-                            "label": labels[i]
-                        })
-
-                        print(i, x_center, y_center)
-                        print(main_frame.shape)
-
-                        color, __dict__ = detect_color(
+                        color, dict = detect_color(
                             main_frame[y: y+h, x: x+w])
-
-                        cv2.imshow("img", main_frame[y: y+h, x: x+w])
+                        crop =  main_frame[y: y+h, x: x+w]
+                        cv2.imshow("img", crop)
                         cv2.waitKey(0)
                         cv2.destroyAllWindows()
-                        cv2.waitKey(1)
 
                         # cv2.circle(bg_img, coords, bg_ratio + 1, color, -1)
                     else:
@@ -198,6 +194,69 @@ class Football_bytetrack():
                 osp.join(save_folder, osp.basename(img_path)), online_im)
 
         return results
+    
+    def inference(self,frame): 
+         
+        timer = Timer()
+        results = []
+     
+        main_frame = frame.copy()
+        outputs, img_info = self.predictor.inference(frame, timer)
+        
+        if outputs[0] is not None:
+            online_targets, _, _ = self.tracker.update(
+                outputs[0], [img_info['height'], img_info['width']], self.exp.test_size)
+            online_tlwhs = []
+            online_ids = []
+            online_scores = []
+            
+            for i, t in enumerate(online_targets):
+
+                tlwh = t.tlwh
+                tid = t.track_id
+                vertical = tlwh[2] / \
+                    tlwh[3] > self.args.aspect_ratio_thresh
+                size = tlwh[2] * tlwh[3]
+
+                if size > self.args.min_box_area and size < self.args.max_box_area:
+                    online_tlwhs.append(tlwh)
+                    online_ids.append(tid)
+                    online_scores.append(t.score)
+
+                    x = np.maximum(0, int(tlwh[0]))
+                    y = np.maximum(0, int(tlwh[1]))
+                    w = np.maximum(0, int(tlwh[2]))
+                    h = np.maximum(0, int(tlwh[3]))
+
+                    crop = main_frame[y: y+h, x: x+w]
+
+                    if (len(crop) == 0):
+                        continue
+
+
+                    x_center, y_center = x + w // 2, y + h // 2
+
+                    _, key = detect_color(crop)
+
+                    results.append(
+                        f"{tid},{tlwh[0]:.2f},{tlwh[1]:.2f},{tlwh[2]:.2f},{tlwh[3]:.2f},{t.score:.2f},{t.label},{x_center},{y_center},{key}  \n"
+                    )
+            res = "".join(results)
+            df = pd.read_csv(io.StringIO(res), sep=",", names = ["id", "x","y","w","h","score", "label", "x_center", "y_center", "color"])
+            timer.toc()
+ 
+        
+           
+
+
+        return df 
+
+        
+        
+
+               
+            
+
 
     def imageflow_demo(self, predictor, vis_folder, current_time):
         cap = cv2.VideoCapture(
@@ -233,9 +292,9 @@ class Football_bytetrack():
         timer = Timer()
         frame_id = 0
         results = []
+        results.append(f"frame_id,id,x,y,w,h,score,label,x_center, y_center,color,")
 
         while True:
-            bg_img = gt_img.copy()
             if frame_id % 20 == 0 and frame_id != 0:
                 logger.info('Processing frame {} ({:.2f} fps)'.format(
                     frame_id, 1. / max(1e-5, timer.average_time)))
@@ -288,13 +347,9 @@ class Football_bytetrack():
                             #                bg_ratio + 1, color, -1)
 
                             results.append(
-                                f"{frame_id},{tid},{tlwh[0]:.2f},{tlwh[1]:.2f},{tlwh[2]:.2f},{tlwh[3]:.2f},{t.score:.2f},{t.label},{x_center},{y_center},{key}.  \n"
+                                f"{frame_id},{tid},{tlwh[0]:.2f},{tlwh[1]:.2f},{tlwh[2]:.2f},{tlwh[3]:.2f},{t.score:.2f},{t.label},{x_center},{y_center},{key}\n"
                             )
-                        else:
-                            bg_img = cv2.putText(bg_img, 'Too close', (gt_w // 2, gt_h // 2), cv2.FONT_HERSHEY_COMPLEX,
-                                                 1.4, (255, 255, 255), 2,  cv2.LINE_AA)
-                            stack = self.img_vertical_stack(main_frame, bg_img)
-                            break
+                     
 
                     timer.toc()
                     online_im = plot_tracking(

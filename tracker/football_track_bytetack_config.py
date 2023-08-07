@@ -18,7 +18,7 @@ args = {
     "name": None,
     "nms": None,
 
-    "path": 'video_demo/test.avi',
+    "path": 'video_demo/right.avi',
     "demo": 'video',
 
 
