@@ -1,9 +1,0 @@
-YOLOX_outputs
-build
-bytetrack
-forked_repo
-image_demo
-team_matching
-tracker
-utils
-yolox

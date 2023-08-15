@@ -8,3 +8,6 @@ bytetrack/pretrained/*
 weights/*
 video_demo/*
 *.mp4
+demo_video/
+image_demo/*
+*.ipynb

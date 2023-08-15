@@ -1,0 +1,1 @@
+from tracker.football_track_bytetack_config import args

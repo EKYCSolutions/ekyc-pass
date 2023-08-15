@@ -20,4 +20,6 @@ fastapi
 cython_bbox
 uvicorn
 python-multipart
+mplsoccer
+stitiching
 pyflann-py3
