@@ -18,25 +18,18 @@ args = {
     "name": None,
     "nms": None,
 
-    "path": 'video_demo/low_frame_5.mov',
-    "demo": 'video',
+    # "path": 'video_demo/IMG_7249.MOV',
+    # "demo": 'video',
 
 
-    # "demo": "image",
-    # "path": "image_demo/",
+    "demo": "image",
+    "path": "image_demo/",
 
     "save_result": True,
     "track_buffer": 30,
     "track_thresh": 0.5,
     "trt": False,
     "tsize": None,
-}
-
-labels = {
-    1: "ball",
-    2: "referee",
-    3: "player",
-    4: "goalkeeper"
 }
 
 labels = {
