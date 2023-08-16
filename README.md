@@ -23,7 +23,7 @@ EkycPASS can :
 
 # 4. Roadmap
 
-![Flow](assets/roadmap.png)
+![Flow](assets/roadmap_2.png)
 
 # 5. License
 
