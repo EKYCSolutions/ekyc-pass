@@ -13,3 +13,4 @@ video_demo/*
 demo_video/
 image_demo/*
 *.ipynb
+.ipynb_checkpoints/
