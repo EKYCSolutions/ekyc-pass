@@ -19,6 +19,8 @@ Ekyc-Pass can :
 
 # 3. Process Flow
 
+![Flow](assets/flow.png)
+
 # 4. Roadmap
 
 # 5. License
