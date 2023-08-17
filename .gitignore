@@ -9,8 +9,8 @@ weights/*
 video_demo/*
 *.mp4
 *.avi
-
 demo_video/
 image_demo/*
 *.ipynb
 .ipynb_checkpoints/
+label/
