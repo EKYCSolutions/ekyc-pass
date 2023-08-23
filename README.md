@@ -15,6 +15,10 @@ EkycPASS can :
 - Generate heatmap on teams level
 - Estimate the ball possession during the game
 
+
+Download yolox_m from here: 
+https://github.com/Megvii-BaseDetection/YOLOX/releases/download/0.1.1rc0/yolox_m.pth
+
 # 2. Sample Video
 
 https://github.com/EKYCSolutions/ekyc-pass/assets/55906679/1bc6cb5a-a5f5-4b87-8ddc-56cef417827b
