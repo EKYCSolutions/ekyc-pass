@@ -4,13 +4,13 @@ build/
 __pycache__/
 YOLOX_outputs/
 forked_repo/*
-bytetrack/pretrained/*
+*.pth
 weights/*
 video_demo/*
 *.mp4
 *.avi
-
 demo_video/
 image_demo/*
 *.ipynb
 .ipynb_checkpoints/
+label/

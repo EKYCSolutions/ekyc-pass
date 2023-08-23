@@ -1,3 +1,3 @@
-from tracker.football_track_bytetack_config import args
-from tracker.football_track_bytetrack import Football_bytetrack
+from tracker.tracker_config import default_args
+from tracker.tracker_bytetrack import TrackerBytetrack
 from tracker.utils import *

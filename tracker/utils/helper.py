@@ -8,7 +8,6 @@ import warnings
 warnings.filterwarnings("ignore")
 
 
-
 def imgByteToNumpy(img):
     image_byte = img
     img_np = cv2.imdecode(np.fromstring(
@@ -39,8 +38,6 @@ def background_subtraction(img):
     result = cv2.bitwise_and(img, img, mask=mask)
 
     return result
-
-
 
 
 def find_key(dictionary, value):
@@ -270,7 +267,7 @@ def plot_heatmap(x, y, save=False):
 def process_df(df):
 
     # Extract values from columns x_center and y_center and put them in a list of lists
-    positions = df[['x_homo', 'y_homo']].values.tolist()
+    positions = df[['x_center', 'y_center']].values.tolist()
     labels = df["label"].values
     color = df["color"].values
 

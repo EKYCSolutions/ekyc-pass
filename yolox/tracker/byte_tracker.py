@@ -5,7 +5,7 @@ from .kalman_filter import KalmanFilter
 from collections import deque
 from yolox.tracker import matching
 from .basetrack import BaseTrack, TrackState
-from tracker.football_track_bytetack_config import labels
+from tracker.tracker_config import labels
 
 
 class STrack(BaseTrack):

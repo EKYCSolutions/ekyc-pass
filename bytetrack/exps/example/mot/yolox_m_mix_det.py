@@ -11,12 +11,12 @@ from yolox.exp import Exp as MyExp
 class Exp(MyExp):
     def __init__(self):
         super(Exp, self).__init__()
-        self.num_classes = 4
+        self.num_classes = 80
         self.depth = 0.67
         self.width = 0.75
         self.warmup_epochs = 1
         self.max_epoch = 300
-        self.input_size = (1088, 1920)
+        self.input_size = (800, 1440)
         self.test_size = (1088, 1920)
         # self.test_size = (608, 1088)
 
