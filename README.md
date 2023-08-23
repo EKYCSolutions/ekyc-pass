@@ -16,7 +16,9 @@ EkycPASS can :
 - Estimate the ball possession during the game
 
 # 2. Sample Video
-![sample](assets/sample.mov)
+
+https://github.com/EKYCSolutions/ekyc-pass/assets/55906679/1bc6cb5a-a5f5-4b87-8ddc-56cef417827b
+
 # 3. Process Flow
 
 ![Flow](assets/flow.png)
