@@ -1,5 +1,6 @@
 from argparse import Namespace
 import os
+import torch
 import os.path as osp
 import time
 import cv2
@@ -13,9 +14,10 @@ from yolox.utils.visualize import plot_tracking
 from yolox.tracker.byte_tracker import BYTETracker
 from yolox.tracking_utils.timer import Timer
 import matplotlib.pyplot as plt
-from tracker.utils.helper import detect_color
-import torch
 from tracker.utils.predictor import Predictor
+from tracker.utils.helper import detect_color
+from tracker.action.tracker_action import TrackerAction
+
 
 IMAGE_EXT = [".jpg", ".jpeg", ".webp", ".bmp", ".png"]
 
